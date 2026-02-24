@@ -31,9 +31,11 @@ export default function Resposta({resultado}) {
 
     return (
     <>
-    <p>
-        Seu IMC é: <span className="fw-semibold">{resultado}</span> - Status: <span className={"fw-semibold " + cor}>{classificacao}</span>
-    </p>
+    {resultado > 0 && (
+        <p>
+            Seu IMC é: <span className="fw-semibold">{resultado}</span> - Status: <span className={"fw-semibold " + cor}>{classificacao}</span> 
+        </p>
+    )}
     </>
     )
 }

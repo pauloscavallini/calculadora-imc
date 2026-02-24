@@ -34,22 +34,22 @@ function App() {
         <>
             <div className="card d-flex gap-3">
                 <Input
-                    nome="peso"
-                    label="Peso"
-                    placeholder="Informe seu peso"
+                    nome={"peso"}
+                    label={"Peso"}
+                    placeholder={"Informe seu peso"}
                     hook={peso} acao={alterarPeso}
-                    tipo="number" />
+                    tipo={"number"} />
 
                 <Input
-                    nome="altura"
-                    label="Altura"
-                    placeholder="Informe sua altura"
+                    nome={"altura"}
+                    label={"Altura"}
+                    placeholder={"Informe sua altura"}
                     hook={altura} acao={alterarAltura}
-                    tipo="number" />
+                    tipo={"number"} />
 
                 <button onClick={calcular} type="button">Calcular IMC</button>
-
-                {(imc > 0 && !isNaN(imc)) ? <Resposta resultado={imc.toFixed(2)} /> : null}
+                
+                <Resposta resultado={imc.toFixed(2)} /> 
             </div>
         </>
     )
